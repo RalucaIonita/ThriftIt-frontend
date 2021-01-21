@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '../models/user';
 import { LoginUser } from '../models/loginUser';
 import { ReturnLoginUser } from '../models/returnLoginUser';
-import { JsonPipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -29,11 +28,9 @@ export class AccountService {
     .subscribe(
       (data) =>
         {
-          console.log(data)
+          console.log(data);
           localStorage.setItem('thriftItToken', JSON.stringify({token: data.accessToken}));
         });
       return true;
   }
-
-
 }
