@@ -5,3 +5,7 @@
     overflow: visible;
     margin-top: -6px;
 }
+
+a {
+    cursor: pointer;
+}
